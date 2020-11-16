@@ -1,0 +1,33 @@
+#row-header {
+    ion-col {
+        font-size: large;
+        font-weight: bold;
+    }
+}
+
+ion-row {
+    align-items: center;
+    border-bottom: 1px solid white;
+}
+
+@media (max-width: 600px) {
+    #row-header {
+        ion-col {
+            font-weight: bold;
+            font-size: medium;
+        }
+    }
+    ion-col {
+        font-size: 13px;
+    }
+    .type {
+        display: none;
+    }
+    .payment-method {
+        display: none;
+    }
+    .date {
+        display: none;
+    }
+
+}
