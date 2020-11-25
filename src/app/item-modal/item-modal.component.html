@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="dismiss()">
+        <ion-icon slot="icon-only" name="arrow-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Edit {{name}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col id="image_container">
+        <img src={{img_lg_src}} alt="Picture of a {{name}}." />
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col id="vendor_link_container">
+        <ion-button href={{url}} target="_blank">Vendor Site</ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label position="stacked">Name:</ion-label>
+          <ion-input value={{name}}></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Vendor:</ion-label>
+          <ion-input value={{vendor}}></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Vendor URL:</ion-label>
+          <ion-input value={{url}}></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Price:</ion-label>
+          <ion-input value={{price}}></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Quantity:</ion-label>
+          <ion-input value={{quantity}}></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="dismiss()">
+        <ion-icon slot="icon-only" name="arrow-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Viewing Job for {{customer}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label position="stacked">Customer:</ion-label>
+          <ion-input value={{customer}}></ion-input>
+          <ion-button click="goToCustomersPage()">View Customer</ion-button>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Date:</ion-label>
+          <ion-input value={{date}}></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Finished:</ion-label>
+          <ion-input value={{finished}}></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Technician:</ion-label>
+          <ion-input value={{technician}}></ion-input>
+          <ion-button (click)="goToEmployeesPage()">View Technician</ion-button>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Billed:</ion-label>
+          <ion-input value={{billed}}></ion-input>
+          <ion-button (click)="goToSalesPage()">View Sales</ion-button>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

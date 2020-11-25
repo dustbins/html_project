@@ -11,6 +11,17 @@ export class DashboardPage implements OnInit, OnDestroy, AfterViewInit {
 
   map: Leaflet.Map;
 
+  inventory_stats: [
+    {
+      item: "Wax Ring",
+      change: "-2"
+    },
+    {
+      item: 'Gloves',
+      change: "+32"
+    }
+  ];
+
   constructor() { }
 
   ngOnInit() {

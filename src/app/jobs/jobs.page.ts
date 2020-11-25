@@ -1,0 +1,60 @@
+import { Component, OnInit } from '@angular/core';
+import { ModalController, NavController } from '@ionic/angular';
+import { JobModalComponent } from '../job-modal/job-modal.component';
+
+@Component({
+  selector: 'app-jobs',
+  templateUrl: './jobs.page.html',
+  styleUrls: ['./jobs.page.scss'],
+})
+export class JobsPage implements OnInit {
+
+  jobs = [
+    {
+      customer: "John Doe",
+      date: "27 Oct 2020",
+      finished: "27 Oct 2020",
+      technician: "Mike Pence",
+      billed: "$450.00",
+      itemsUsed: [
+      ]
+    }
+  ]
+
+  modal;
+
+  constructor(public modalController: ModalController, public navController: NavController) { }
+
+  ngOnInit() {
+
+  }
+
+  async openModal(job) {
+    this.modal = await this.modalController.create({
+      component: JobModalComponent,
+      componentProps: {
+        'customer': job.customer,
+        'date': job.date,
+        'finished': job.finished,
+        'technician': job.technician,
+        'billed': job.billed
+      }
+    });
+
+    this.modal.onDidDismiss().then(({ data }) => {
+      if (data !== null) {
+        console.log(data);
+        if (data.visit == "employees") {
+          this.navController.navigateRoot('/employee');
+        } else if (data.visit == "sales") {
+          this.navController.navigateRoot('/sales');
+        } else {
+          // do nothing, stay here
+        }
+      }
+    });
+    return await this.modal.present();
+  }
+
+
+}

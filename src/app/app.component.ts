@@ -32,6 +32,11 @@ export class AppComponent implements OnInit {
       url: '/inventory',
       icon: 'server'
     },
+    {
+      title: 'Jobs',
+      url: '/jobs',
+      icon: 'bag'
+    },
   ];
 
 
