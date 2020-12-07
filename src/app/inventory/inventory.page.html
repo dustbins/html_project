@@ -12,176 +12,38 @@
 <ion-content>
 
   <ion-row>
-    <ion-col size="3" style="padding-left: 21px;">Item</ion-col>
-    <ion-col size="3">Vendor</ion-col>
-    <ion-col size="2">Price</ion-col>
-    <ion-col size="2">Quantity</ion-col>
+    <ion-col size-xs="6" size-sm="4" size-md="4" size-lg="4" style="padding-left: 21px;">Item</ion-col>
+    <ion-col class="vendor" size-xs="0" size-sm="3" size-md="3" size-lg="3">Vendor</ion-col>
+    <ion-col size-xs="3" size-sm="2" size-md="2" size-lg="2">Price</ion-col>
+    <ion-col size-xs="2" size-sm="2" size-md="2" size-lg="2">Qty</ion-col>
   </ion-row>
 
   <ion-list>
     <ion-item *ngFor="let item of items; let i = index">
-      <ion-col size="1">
+      <ion-col size-xs="2" size-sm="1" size-md="1" size-lg="1">
         <ion-thumbnail><img src={{item.img_src}}> </ion-thumbnail>
       </ion-col>
-      <ion-col size="2">
+      <ion-col size-xs="4" size-sm="3" size-md="3" size-lg="3">
         <ion-label>{{item.name}}</ion-label>
       </ion-col>
-      <ion-col size="3">
+      <ion-col class="vendor" size-sm="3" size-md="3" size-lg="3">
         <ion-label>{{item.vendor}}</ion-label>
       </ion-col>
-      <ion-col size="2">
+      <ion-col size-xs="3" size-sm="2" size-md="2" size-lg="2">
         <ion-label>{{item.price}}</ion-label>
       </ion-col>
-      <ion-col size="2">
+      <ion-col size-xs="2" size-sm="2" size-md="2" size-lg="2">
         <ion-label>{{item.quantity}}</ion-label>
       </ion-col>
-      <ion-col size="2">
-        <ion-button fill="outline" (click)="openModal(item)">
-          View Item
-        </ion-button>
+      <ion-col size-lg="1">
+        <ion-icon name="chevron-forward-outline"></ion-icon>
       </ion-col>
     </ion-item>
   </ion-list>
-
-  <!-- <ion-grid>
-    <ion-row id="row-header">
-      <ion-col size="4">Item</ion-col>
-      <ion-col size="2">Vendor</ion-col>
-      <ion-col size="2">Quantity</ion-col>
-      <ion-col size="2">Price</ion-col>
-    </ion-row>
-
-    <ion-row id="itemInfo">
-      <ion-col size="1" size-xs="2">
-        <ion-thumbnail>
-          <img src="../../assets/images/inventory/hammer.jpg" />
-        </ion-thumbnail>
-      </ion-col>
-      <ion-col size="2">Hammer</ion-col>
-      <ion-col size="2">XYZ Supply</ion-col>
-      <ion-col size="2">10</ion-col>
-      <ion-col size="2">$50</ion-col>
-    </ion-row>
-
-    <ion-row id="itemInfo">
-      <ion-col size="1" size-xs="2">
-        <ion-thumbnail>
-          <img src="../../assets/images/inventory/drillbits.jpg" />
-        </ion-thumbnail>
-      </ion-col>
-      <ion-col size="2">Drill bits</ion-col>
-      <ion-col size="2">XYZ Supply</ion-col>
-      <ion-col size="2">10</ion-col>
-      <ion-col size="2">$50</ion-col>
-    </ion-row>
-
-    <ion-row id="itemInfo">
-      <ion-col size="1" size-xs="2">
-        <ion-thumbnail>
-          <img src="../../assets/images/inventory/gloves.jpg" />
-        </ion-thumbnail>
-      </ion-col>
-      <ion-col size="2">Gloves</ion-col>
-      <ion-col size="2">XYZ Supply</ion-col>
-      <ion-col size="2">10</ion-col>
-      <ion-col size="2">$50</ion-col>
-    </ion-row>
-
-    <ion-row id="itemInfo">
-      <ion-col size="1" size-xs="2">
-        <ion-thumbnail>
-          <img src="../../assets/images/inventory/hard-hat.jpg" />
-        </ion-thumbnail>
-      </ion-col>
-      <ion-col size="2">Hard Hat</ion-col>
-      <ion-col size="2">XYZ Supply</ion-col>
-      <ion-col size="2">10</ion-col>
-      <ion-col size="2">$50</ion-col>
-    </ion-row>
-
-    <ion-row id="itemInfo">
-      <ion-col size="1" size-xs="2">
-        <ion-thumbnail>
-          <img src="../../assets/images/inventory/mask.jpg" />
-        </ion-thumbnail>
-      </ion-col>
-      <ion-col size="2">PPE Mask</ion-col>
-      <ion-col size="2">XYZ Supply</ion-col>
-      <ion-col size="2">10</ion-col>
-      <ion-col size="2">$50</ion-col>
-    </ion-row>
-
-    <ion-row id="itemInfo">
-      <ion-col size="1" size-xs="2">
-        <ion-thumbnail>
-          <img src="../../assets/images/inventory/plywood.jpg" />
-        </ion-thumbnail>
-      </ion-col>
-      <ion-col size="2">Plywood</ion-col>
-      <ion-col size="2">XYZ Supply</ion-col>
-      <ion-col size="2">10</ion-col>
-      <ion-col size="2">$50</ion-col>
-    </ion-row>
-
-    <ion-row id="itemInfo">
-      <ion-col size="1" size-xs="2">
-        <ion-thumbnail>
-          <img src="../../assets/images/inventory/razers.jpg" />
-        </ion-thumbnail>
-      </ion-col>
-      <ion-col size="2">Razor's</ion-col>
-      <ion-col size="2">XYZ Supply</ion-col>
-      <ion-col size="2">10</ion-col>
-      <ion-col size="2">$50</ion-col>
-    </ion-row>
-
-    <ion-row id="itemInfo">
-      <ion-col size="1" size-xs="2">
-        <ion-thumbnail>
-          <img src="../../assets/images/inventory/screws.jpg" />
-        </ion-thumbnail>
-      </ion-col>
-      <ion-col size="2">Screws</ion-col>
-      <ion-col size="2">XYZ Supply</ion-col>
-      <ion-col size="2">10</ion-col>
-      <ion-col size="2">$50</ion-col>
-    </ion-row>
-
-    <ion-row id="itemInfo">
-      <ion-col size="1" size-xs="2">
-        <ion-thumbnail>
-          <img src="../../assets/images/inventory/welding-mask.jpg" />
-        </ion-thumbnail>
-      </ion-col>
-      <ion-col size="2">Welding Mask</ion-col>
-      <ion-col size="2">XYZ Supply</ion-col>
-      <ion-col size="2">10</ion-col>
-      <ion-col size="2">$50</ion-col>
-    </ion-row>
-
-    <ion-row id="itemInfo">
-      <ion-col size="1" size-xs="2">
-        <ion-thumbnail>
-          <img src="../../assets/images/inventory/wrench.jpg" />
-        </ion-thumbnail>
-      </ion-col>
-      <ion-col size="2">Wrench</ion-col>
-      <ion-col size="2">XYZ Supply</ion-col>
-      <ion-col size="2">10</ion-col>
-      <ion-col size="2">$50</ion-col>
-    </ion-row>
-
-    <ion-row id="itemInfo">
-      <ion-col size="1" size-xs="2">
-        <ion-thumbnail>
-          <img src="../../assets/images/inventory/socket-set.jpg" />
-        </ion-thumbnail>
-      </ion-col>
-      <ion-col size="2">Socket Set</ion-col>
-      <ion-col size="2">XYZ Supply</ion-col>
-      <ion-col size="2">10</ion-col>
-      <ion-col size="2">$50</ion-col>
-    </ion-row>
-
-  </ion-grid> -->
 </ion-content>
+
+<!--  Use for desktop client only?
+      <ion-col size="2">
+        <ion-button fill="outline" (click)="openModal(item)">
+          View Item
+        </ion-button> -->

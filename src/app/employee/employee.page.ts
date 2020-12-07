@@ -26,84 +26,84 @@ export class EmployeePage implements OnInit {
       name: "Craig Door",
       position: "VP Marketing",
       salary: "100K",
-      phone: "",
+      phone: "662-523-5263",
       img_src: "../../assets/images/employees/image3.jpg"
     },
     {
       name: "Silvester Tree",
       position: "VP Operations",
       salary: "150K",
-      phone: "",
+      phone: "323-224-9534",
       img_src: "../../assets/images/employees/image4.jpg"
     },
     {
       name: "Sierra Kay",
       position: "Project Manager",
       salary: "95K",
-      phone: "",
+      phone: "212-331-4534",
       img_src: "../../assets/images/employees/image5.jpg"
     },
     {
       name: "Daniel Shark",
       position: "HR Manager",
       salary: "102K",
-      phone: "",
+      phone: "555-666-7777",
       img_src: "../../assets/images/employees/image6.jpg"
     },
     {
       name: "Corey Pore",
       position: "IT Team Lead",
       salary: "85K",
-      phone: "",
+      phone: "667-778-9901",
       img_src: "../../assets/images/employees/image7.jpg"
     },
     {
       name: "Zachary Olson",
       position: "CIO",
       salary: "155K",
-      phone: "",
+      phone: "112-334-4456",
       img_src: "../../assets/images/employees/image8.jpg"
     },
     {
       name: "Jack Mate",
       position: "COO",
       salary: "199K",
-      phone: "",
+      phone: "221-332-2321",
       img_src: "../../assets/images/employees/image9.jpg"
     },
     {
       name: "Martha Lewis",
       position: "CTO",
       salary: "199K",
-      phone: "",
+      phone: "667-777-6677",
       img_src: "../../assets/images/employees/image10.jpg"
     },
     {
       name: "Tyler Terry",
       position: "CFO",
       salary: "188K",
-      phone: "",
+      phone: "234-453-3322",
       img_src: "../../assets/images/employees/image11.jpg"
     },
     {
       name: "Jorge Bush",
       position: "Service Tech",
       salary: "44K",
-      phone: "",
+      phone: "614-534-2423",
       img_src: "../../assets/images/employees/image12.jpg"
     },
     {
       name: "Obama Thrump",
       position: "Service Tech",
       salary: "10K",
-      phone: "",
+      phone: "513-434-2222",
       img_src: "../../assets/images/employees/image13.jpg"
     },
     {
       name: "Ivanka Dood",
       position: "Service Tech",
       salary: "15K",
-      phone: "",
+      phone: "666-090-4341",
       img_src: "../../assets/images/employees/image14.jpg"
     }
   ]
