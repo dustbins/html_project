@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ModalController, NavController } from '@ionic/angular';
+import { ModalController, NavController, Platform } from '@ionic/angular';
 import { JobModalComponent } from '../job-modal/job-modal.component';
 
 @Component({
@@ -9,9 +9,80 @@ import { JobModalComponent } from '../job-modal/job-modal.component';
 })
 export class JobsPage implements OnInit {
 
-  jobs = [
+  public jobs = [
     {
       customer: "John Doe",
+      date: "27 Oct 2020",
+      finished: "27 Oct 2020",
+      technician: "Mike Pence",
+      billed: "$450.00",
+      itemsUsed: [
+      ]
+    },
+    {
+      customer: "James Mac",
+      date: "15 Dec 2020",
+      finished: "16 Dec 2020",
+      technician: "Skizzy Mars",
+      billed: "$450.00",
+      itemsUsed: [
+      ]
+    },
+    {
+      customer: "Harold Dingle",
+      date: "11 Feb 2020",
+      finished: "11 Feb 2020",
+      technician: "Metallica",
+      billed: "$450.00",
+      itemsUsed: [
+      ]
+    },
+    {
+      customer: "Rex Tillerson",
+      date: "05 Aug 2020",
+      finished: "05 Aug 2020",
+      technician: "Bon Jovi",
+      billed: "$450.00",
+      itemsUsed: [
+      ]
+    }, {
+      customer: "Bryan Cranston",
+      date: "27 Oct 2020",
+      finished: "27 Oct 2020",
+      technician: "Luke Skywalker",
+      billed: "$450.00",
+      itemsUsed: [
+      ]
+    },
+    {
+      customer: "Michael New",
+      date: "27 Oct 2020",
+      finished: "27 Oct 2020",
+      technician: "Patrick Star",
+      billed: "$450.00",
+      itemsUsed: [
+      ]
+    },
+    {
+      customer: "Jennifer White",
+      date: "27 Oct 2020",
+      finished: "27 Oct 2020",
+      technician: "Spongebob Squarepants",
+      billed: "$450.00",
+      itemsUsed: [
+      ]
+    },
+    {
+      customer: "Vladmir Putin",
+      date: "27 Oct 2020",
+      finished: "27 Oct 2020",
+      technician: "Mike Pence",
+      billed: "$450.00",
+      itemsUsed: [
+      ]
+    },
+    {
+      customer: "Sarah Strong",
       date: "27 Oct 2020",
       finished: "27 Oct 2020",
       technician: "Mike Pence",
@@ -21,9 +92,11 @@ export class JobsPage implements OnInit {
     }
   ]
 
-  modal;
+  public modal;
 
-  constructor(public modalController: ModalController, public navController: NavController) { }
+  constructor(
+    public modalController: ModalController,
+    public navController: NavController) { }
 
   ngOnInit() {
 

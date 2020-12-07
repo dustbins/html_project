@@ -11,35 +11,37 @@
 
 <ion-content>
 
+  <!-- [576 < sm < 768], [768 < md < 992], [992 < lg < 1200], [1200 < lg ]
+  [hidden]="devWidth > 576"
+  -->
+
   <ion-row>
-    <ion-col size="2" style="padding-left: 21px;">Customer</ion-col>
-    <ion-col size="2">Date</ion-col>
-    <ion-col size="2">Finished</ion-col>
-    <ion-col size="2">Technician</ion-col>
-    <ion-col size="2">Billed</ion-col>
+    <ion-col size-xs="5" size-sm="4" size-md="4" size-lg="3" style="padding-left: 21px;">Customer</ion-col>
+    <ion-col class="date" size-xs="5" size-sm="3" size-md="2" size-lg="2">Date</ion-col>
+    <ion-col class="finished" size-xs="0" size-sm="0" size-md="0" size-lg="2">Finished</ion-col>
+    <ion-col class="technician" size-xs="0" size-sm="0" size-md="3" size-lg="2">Technician</ion-col>
+    <ion-col class="billed" size-xs="0" size-sm="2" size-md="2" size-lg="2">Billed</ion-col>
   </ion-row>
 
   <ion-list>
-    <ion-item *ngFor="let job of jobs; let i = index">
-      <ion-col size="2">
+    <ion-item *ngFor="let job of jobs; let i = index" button="true" (click)="openModal(job)" lines="inset">
+      <ion-col size-xs="5" size-sm="4" size-md="4" size-lg="3">
         <ion-label>{{job.customer}}</ion-label>
       </ion-col>
-      <ion-col size="2">
+      <ion-col class="date" size-xs="5" size-sm="3" size-md="2" size-lg="2">
         <ion-label>{{job.date}}</ion-label>
       </ion-col>
-      <ion-col size="2">
+      <ion-col class="finished" size-md="0" size-lg="2">
         <ion-label>{{job.finished}}</ion-label>
       </ion-col>
-      <ion-col size="2">
+      <ion-col class="technician" size-md="3" size-lg="2">
         <ion-label>{{job.technician}}</ion-label>
       </ion-col>
-      <ion-col size="2">
+      <ion-col class="billed" size-sm="3" size-md="2" size-lg="2">
         <ion-label>{{job.billed}}</ion-label>
       </ion-col>
-      <ion-col size="2">
-        <ion-button fill="outline" (click)="openModal(job)">
-          View Item
-        </ion-button>
+      <ion-col size="1">
+        <ion-icon name="chevron-forward-outline"></ion-icon>
       </ion-col>
     </ion-item>
   </ion-list>

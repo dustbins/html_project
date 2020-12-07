@@ -1,0 +1,49 @@
+
+
+@media (min-width: 0px) and (max-width: 576px){
+    .finished {
+        display: none;
+    }
+    .technician {
+        display: none;
+    }
+    .billed {
+        display: none;
+    }
+
+    ion-icon {
+        margin-left: 50%;
+        margin-right: 50%;    
+    }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+    .finished {
+        display: none;
+    }
+    .technician {
+        display: none;
+    }
+    ion-icon {
+        margin-left: 50%;
+        margin-right: 50%;    
+    }
+
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+    .finished {
+        display: none;
+    }
+    .technician {
+        
+    }
+    .billed {
+        
+    }
+
+    ion-icon {
+        margin-left: 50%;
+        margin-right: 50%;    
+    }
+}
